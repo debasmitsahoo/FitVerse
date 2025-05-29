@@ -80,9 +80,8 @@ export default function Home() {
           <h3>
             <span className="multiple-text text-[4rem] font-[550]"></span>
           </h3>
-          <p className="text-[1.6rem] mb-[2rem] mt-[2rem]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, doloremque. Culpa soluta iste beatae eveniet
-            dolor sed nesciunt sit error voluptas nihil nostrum facere esse, illum ullam ea! Quibusdam, velit?
+          <p className="text-[1.6rem] mb-[2rem] mt-[2rem] max-w-[60rem]">
+            At FitVerse, we turn your fitness goals into reality with personalized training plans, world-class coaches, and a motivating community. Whether you're just starting out or you're a seasoned athlete, we've got everything you need to look—and feel—your very best.
           </p>
           <Link
             href="/join"
@@ -96,7 +95,14 @@ export default function Home() {
           className="home-img relative before:content-['VERSE'] before:absolute before:top-[10%] before:left-[-52%] before:translate-x-[-50%] before:text-[20rem] before:font-[400] before:leading-[20rem] before:text-white before:opacity-10 before:z-[-1]"
           data-aos="zoom-in"
         >
-          <img src="/assets/hero img 3.jpg" alt="Home Image" className="w-[45vw]" />
+          <div className="relative w-[55vw] h-[80vh]">
+            <img 
+              src="/hero img 3.jpg" 
+              alt="Home Image" 
+              className="w-full h-full object-contain mix-blend-multiply filter brightness-110 contrast-110 absolute bottom-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent"></div>
+          </div>
         </div>
       </section>
 
@@ -138,40 +144,67 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="about flex justify-center items-center gap-[1rem] min-h-screen p-[10rem_8%_2rem]" id="about">
-        <div className="about-img" data-aos="zoom-in-down">
-          <img
-            src="/assets/about.jpg"
-            alt=""
-            className="w-[50vw] border-2 border-white rounded-[1rem] transition-[0.5s] ease hover:scale-[1.01] hover:border-[#45ffca]"
-          />
+      <section className="about flex justify-center items-center gap-[4rem] min-h-screen p-[10rem_8%_2rem]" id="about">
+        <div className="about-img grid grid-cols-2 gap-4 w-[50%]" data-aos="zoom-in-down">
+          <div className="col-span-2">
+            <img
+              src="/image1.jpg"
+              alt="Fitness Training"
+              className="w-full h-[300px] object-cover rounded-[20px] border-2 border-white transition-[0.5s] ease hover:scale-[1.02] hover:border-[#45ffca]"
+            />
+          </div>
+          <div>
+            <img
+              src="/image2.jpg"
+              alt="Weight Training"
+              className="w-full h-[250px] object-cover rounded-[20px] border-2 border-white transition-[0.5s] ease hover:scale-[1.02] hover:border-[#45ffca]"
+            />
+          </div>
+          <div>
+            <img
+              src="/image3.jpg"
+              alt="Strength Training"
+              className="w-full h-[250px] object-cover rounded-[20px] border-2 border-white transition-[0.5s] ease hover:scale-[1.02] hover:border-[#45ffca]"
+            />
+          </div>
+          <div className="col-span-2">
+            <img
+              src="/image4.jpg"
+              alt="Fitness Community"
+              className="w-full h-[300px] object-cover rounded-[20px] border-2 border-white transition-[0.5s] ease hover:scale-[1.02] hover:border-[#45ffca]"
+            />
+          </div>
         </div>
 
-        <div className="about-content p-[0_3rem]" data-aos="zoom-in-up">
-          <h2 className="heading text-left text-[6rem] leading-[1.2]">Why Choose Us?</h2>
-          <p className="text-[1.6rem] my-[2rem]">
-            Our Diverse membership base creates a friendly and supportive atmosphere, where you can make friends and
-            stay motivated
-          </p>
-          <p className="text-[1.6rem] my-[2rem]">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore id doloremque, voluptatem tempora
-            quibusdam nihil nam quam ad laudantium non nesciunt dolor minima laboriosam quidem magni sequi iste fugit
-            eligendi?
-          </p>
-          <p className="text-[1.6rem] my-[2rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et laudantium, a architecto molestias vel nulla
-            quisquam obcaecati porro nam adipisci eveniet ducimus, placeat at consequuntur numquam totam. Doloribus,
-            excepturi facere!
-          </p>
-          <p className="text-[1.6rem] my-[2rem]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae harum soluta nisi doloremque cupiditate
-            architecto voluptate possimus culpa eaque laborum quia odio asperiores voluptatem, eos sapiente? Odit quidem
-            sint est?
-          </p>
+        <div className="about-content p-[0_3rem] w-[50%]" data-aos="zoom-in-up">
+          <h2 className="heading text-left text-[6rem] leading-[1.2] mb-8">Why Choose Us?</h2>
+          
+          <div className="space-y-8">
+            <div className="bg-[#111] p-6 rounded-[20px] border border-transparent hover:border-[#45ffca] transition-all duration-500">
+              <h3 className="text-[2.4rem] font-bold text-[#45ffca] mb-4">A Supportive Community</h3>
+              <p className="text-[1.6rem] text-gray-300">
+                Our diverse membership network keeps you motivated every step of your journey—train with friends, cheer each other on, and celebrate every milestone together.
+              </p>
+            </div>
+
+            <div className="bg-[#111] p-6 rounded-[20px] border border-transparent hover:border-[#45ffca] transition-all duration-500">
+              <h3 className="text-[2.4rem] font-bold text-[#45ffca] mb-4">Expert Coaching</h3>
+              <p className="text-[1.6rem] text-gray-300">
+                Certified trainers craft each workout and nutrition plan to your unique needs, ensuring you progress safely and steadily.
+              </p>
+            </div>
+
+            <div className="bg-[#111] p-6 rounded-[20px] border border-transparent hover:border-[#45ffca] transition-all duration-500">
+              <h3 className="text-[2.4rem] font-bold text-[#45ffca] mb-4">State-of-the-Art Facilities</h3>
+              <p className="text-[1.6rem] text-gray-300">
+                From premium cardio machines to free-weight zones and recovery lounges, our gyms are fully equipped for every fitness level.
+              </p>
+            </div>
+          </div>
 
           <Link
             href="#"
-            className="btn inline-block py-[1rem] px-[2.8rem] bg-[#45ffca] rounded-[1rem] shadow-none text-[1.6rem] text-[#000] tracking-[0.1rem] font-semibold transition-[0.5s] ease hover:text-white hover:shadow-[0_0_1.6rem]"
+            className="btn inline-block py-[1rem] px-[2.8rem] bg-[#45ffca] rounded-[1rem] shadow-none text-[1.6rem] text-[#000] tracking-[0.1rem] font-semibold transition-[0.5s] ease hover:text-white hover:shadow-[0_0_1.6rem] mt-8"
           >
             Book a Free Class
           </Link>
@@ -248,52 +281,51 @@ export default function Home() {
 
       {/* Review Section */}
       <section className="review bg-[#000] min-h-screen p-[10rem_8%_2rem]" id="review">
-        <div className="review-box bg-cover flex justify-center items-center flex-col">
-          <h2 className="heading text-center text-[6.5rem] mb-[5rem]" data-aos="zoom-in-down">
-            Client <span>Reviews</span>
-          </h2>
-          <div className="wrapper grid grid-cols-3 gap-[3rem]" data-aos="zoom-in-up">
-            <div className="review-item min-h-[450px] min-w-[280px] bg-[#111] border-[3px] border-[rgba(238,238,238,0.3)] rounded-[2rem] m-[0_2rem] p-[30px_40px] cursor-pointer flex flex-col justify-center items-center gap-[1rem] text-white transition-[0.5s] ease-in-out hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.03]">
-              <img src="/assets/1.jpg" alt="" className="w-[15rem] rounded-[50%] border-2 border-[#45ffca]" />
-              <h2 className="text-[2.8rem]">Umakant</h2>
-              <div className="rating">
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
+        <h2 className="heading text-center text-[6.5rem]" data-aos="zoom-in-down">
+          Client <span>Reviews</span>
+        </h2>
+
+        <div className="review-content grid grid-cols-[repeat(auto-fit,minmax(350px,auto))] items-center gap-[2.3rem] mt-[4.1rem]" data-aos="zoom-in-up">
+          {/* Umakant's Review */}
+          <div className="box bg-[#111] rounded-[27px] border border-transparent shadow-[0_0_5px_#45ffca] p-[20px] transition-all duration-500 hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.04]">
+            <div className="flex items-center mb-4">
+              <img src="/1.jpg" alt="Umakant" className="w-20 h-20 rounded-full object-cover border-2 border-[#45ffca]" />
+              <div className="ml-4">
+                <h3 className="text-[2.2rem] font-bold text-white">Umakant</h3>
+                <p className="text-[#45ffca] text-[1.6rem]">Premium Member</p>
               </div>
-              <p className="text-[1.5rem] leading-[1.3]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing eupiditate culpa.
-              </p>
             </div>
-            <div className="review-item min-h-[450px] min-w-[280px] bg-[#111] border-[3px] border-[rgba(238,238,238,0.3)] rounded-[2rem] m-[0_2rem] p-[30px_40px] cursor-pointer flex flex-col justify-center items-center gap-[1rem] text-white transition-[0.5s] ease-in-out hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.03]">
-              <img src="/assets/2.jpg" alt="" className="w-[15rem] rounded-[50%] border-2 border-[#45ffca]" />
-              <h2 className="text-[2.8rem]">Asish</h2>
-              <div className="rating">
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
+            <p className="text-[1.6rem] text-gray-300">
+              "The training programs here are exceptional. I've seen amazing results in just a few months. The trainers are professional and the equipment is top-notch!"
+            </p>
+          </div>
+
+          {/* Ashish's Review */}
+          <div className="box bg-[#111] rounded-[27px] border border-transparent shadow-[0_0_5px_#45ffca] p-[20px] transition-all duration-500 hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.04]">
+            <div className="flex items-center mb-4">
+              <img src="/2.jpg" alt="Ashish" className="w-20 h-20 rounded-full object-cover border-2 border-[#45ffca]" />
+              <div className="ml-4">
+                <h3 className="text-[2.2rem] font-bold text-white">Ashish</h3>
+                <p className="text-[#45ffca] text-[1.6rem]">Fitness Enthusiast</p>
               </div>
-              <p className="text-[1.5rem] leading-[1.3]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing eupiditate culpa.
-              </p>
             </div>
-            <div className="review-item min-h-[450px] min-w-[280px] bg-[#111] border-[3px] border-[rgba(238,238,238,0.3)] rounded-[2rem] m-[0_2rem] p-[30px_40px] cursor-pointer flex flex-col justify-center items-center gap-[1rem] text-white transition-[0.5s] ease-in-out hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.03]">
-              <img src="/assets/3.jpg" alt="" className="w-[15rem] rounded-[50%] border-2 border-[#45ffca]" />
-              <h2 className="text-[2.8rem]">Amit</h2>
-              <div className="rating">
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
-                <i className="bx bxs-star text-[gold] text-[2rem]" id="Star"></i>
+            <p className="text-[1.6rem] text-gray-300">
+              "Best gym in the area! The community here is amazing and the atmosphere is always motivating. I've achieved my fitness goals faster than I expected."
+            </p>
+          </div>
+
+          {/* Amit's Review */}
+          <div className="box bg-[#111] rounded-[27px] border border-transparent shadow-[0_0_5px_#45ffca] p-[20px] transition-all duration-500 hover:border-[#45ffca] hover:translate-y-[-5px] hover:scale-[1.04]">
+            <div className="flex items-center mb-4">
+              <img src="/3.jpg" alt="Amit" className="w-20 h-20 rounded-full object-cover border-2 border-[#45ffca]" />
+              <div className="ml-4">
+                <h3 className="text-[2.2rem] font-bold text-white">Amit</h3>
+                <p className="text-[#45ffca] text-[1.6rem]">Regular Member</p>
               </div>
-              <p className="text-[1.5rem] leading-[1.3]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing eupiditate culpa.
-              </p>
             </div>
+            <p className="text-[1.6rem] text-gray-300">
+              "The personalized attention and guidance from trainers is outstanding. They really care about your progress and help you stay consistent with your fitness journey."
+            </p>
           </div>
         </div>
       </section>
