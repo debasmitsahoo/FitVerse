@@ -1,5 +1,6 @@
 import Link from "next/link"
 import ClientScripts from "@/components/client-scripts"
+import BMICalculator from "@/components/bmi-calculator"
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
       <header className="fixed w-full top-0 right-0 z-[1000] flex justify-between items-center p-[2rem_9%] bg-black/50 backdrop-blur-[10px] transition-all duration-500">
         <Link
           href="#home"
-          className="logo text-[3rem] text-white font-extrabold cursor-pointer transition-[0.3s] ease hover:scale-110"
+          className="logo cursor-pointer transition-[0.3s] ease hover:scale-110"
         >
-          Fit <span>Verse</span>
+          <img src="/logo.svg" alt="FitVerse Logo" className="h-[10rem]" />
         </Link>
 
         <div className="bx bx-menu text-[3.6rem] text-[#45ffca] cursor-pointer hidden" id="menu-icon"></div>
@@ -29,6 +30,14 @@ export default function Home() {
               className="text-[1.8rem] font-medium text-white ml-[4rem] transition-all duration-500 border-b-[3px] border-transparent hover:text-[#45ffca] hover:border-[#45ffca]"
             >
               Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="#bmi"
+              className="text-[1.8rem] font-medium text-white ml-[4rem] transition-all duration-500 border-b-[3px] border-transparent hover:text-[#45ffca] hover:border-[#45ffca]"
+            >
+              BMI Calculator
             </Link>
           </li>
           <li>
@@ -140,6 +149,17 @@ export default function Home() {
             <img src="/assets/about.jpg" alt="" className="h-auto w-full rounded-[27px] mb-[1.4rem]" />
             <h4 className="text-[25px] font-bold mb-[10px] leading-[1.4]">Running</h4>
           </div>
+        </div>
+      </section>
+
+      {/* BMI Calculator Section */}
+      <section className="bmi-calculator bg-[#000] min-h-screen p-[10rem_8%_2rem]" id="bmi">
+        <h2 className="heading text-center text-[6.5rem]" data-aos="zoom-in-down">
+          Calculate Your <span>BMI</span>
+        </h2>
+        
+        <div className="max-w-[600px] mx-auto mt-[4.1rem]" data-aos="zoom-in-up">
+          <BMICalculator />
         </div>
       </section>
 
